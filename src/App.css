@@ -27,44 +27,48 @@ header h1{
 }
 .container{
   padding-inline: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-.calculator input{
-  margin-bottom: 20px;
-}
+
 .resultTxt{
   display: flex;
   align-items: center;
   justify-content: flex-end;
   color: #fff;
   background-color: #181F33;
-  width: 327px;
+  width: 100%;
+  max-width: 540px;
   height: 88px;
   border-radius: 10px;
   margin-bottom: 24px;
   font-family: League Spartan;
-  font-size: 40px;
+  font-size: 56px;
   font-weight: 700;
   line-height: 36.8px;
   letter-spacing: -0.6666666865348816px;
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;  
+  padding: 0 32px;
 }
 
 .btns{
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  padding: 24px;
+  padding: 32px;
   background-color: #181F33;
   border-radius: 10px;
-  gap: 13px;
+  gap: 24px;
+  width: 100%;
+  max-width: 540px;
 }
 .btn{
   padding-inline: 10px;
   padding-top: 13px;
   padding-bottom: 11px;
   font-family: League Spartan;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 29.44px;
   letter-spacing: -0.5333333611488342px;
@@ -93,4 +97,41 @@ header h1{
   background-color: #647198;
   color: #fff;
   box-shadow: 0px -4px 0px 0px #414E73 inset;
+}
+
+@media (min-width: 768px) {
+  #root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header {
+    padding-left: 40px;
+    padding-top: 40px;
+    margin-inline: 109.175px;
+  }
+  .container {
+    padding-inline: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  header {
+    padding-left: 40px;
+    padding-top: 40px;
+    margin-inline: 445.175px;
+  }
+
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
