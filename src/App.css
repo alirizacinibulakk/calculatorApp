@@ -1,21 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body{
+  background-color: #3A4663;
+  font-family: 'League Spartan', sans-serif;
+}
+
+header{
+  padding-left: 31px;
+  padding-top: 30px;
+  margin-bottom: 32px;
+}
+header h1{
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36.8px;
+  letter-spacing: -0.6666666865348816px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.container{
+  padding-inline: 24px;
 }
 .calculator input{
   margin-bottom: 20px;
 }
+.resultTxt{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #fff;
+  background-color: #181F33;
+  width: 327px;
+  height: 88px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  font-family: League Spartan;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 36.8px;
+  letter-spacing: -0.6666666865348816px;
+  text-align: right;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;  
+}
+.btn-reset{
+  grid-column: span 2;
+  background-color: #647198;
+  color: #fff;
+}
+.btn-equals{
+  grid-column: span 2;
+  background-color: #D03F2F;
+  color: #fff;
+}
+.btn-del{
+  background-color: #647198;
+  color: #fff;
+}
+
 .btns{
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  padding: 24px;
+  background-color: #181F33;
+  border-radius: 10px;
+  gap: 13px;
 }
 .btn{
-  padding: 7px 5px;
+  padding-inline: 10px;
+  padding-top: 13px;
+  padding-bottom: 11px;
+  font-family: League Spartan;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29.44px;
+  letter-spacing: -0.5333333611488342px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background-color: #EAE3DC;
+  border-radius: 5px;
+  color: #434A59;
+  box-shadow: 0px -4px 0px 0px #B3A497 inset;
 }

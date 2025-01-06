@@ -26,21 +26,27 @@ function App() {
   const buttons = ["1","2","3","DEL","4","5","6","+","7","8","9","-",".","0","/","*","RESET","="]
 
   return (
-    <div className='container'>
-      <div className="calculator">
-        <div className="resultTxt">
-          {result !== null ? result : display}
-        </div>
-        <div className="btns">
-          {
-            buttons.map(x => (
-              <button key={x} className='btn' onClick={() => handleButtonClick(x)}>{x}</button>
+    <>
+      <header>
+        <h1>calc</h1>
+      </header>
+      <div className='container'>
+        <div className="calculator">
+          <div className="resultTxt">
+            {result !== null ? result : display}
+          </div>
+          <div className="btns">
+            {
+              buttons.map(x => (
+                <button key={x} className={`btn ${x === "RESET" ? "btn-reset" : ""} ${x === "DEL" ? "btn-del" : ""} ${x === "=" ? "btn-equals" : ""}`} onClick={() => handleButtonClick(x)}>{x}</button>
 
-            ))
-          }
+              ))
+            }
+          </div>
         </div>
       </div>
-    </div>
+    
+    </>
   )
 }
 
