@@ -50,20 +50,6 @@ header h1{
   text-underline-position: from-font;
   text-decoration-skip-ink: none;  
 }
-.btn-reset{
-  grid-column: span 2;
-  background-color: #647198;
-  color: #fff;
-}
-.btn-equals{
-  grid-column: span 2;
-  background-color: #D03F2F;
-  color: #fff;
-}
-.btn-del{
-  background-color: #647198;
-  color: #fff;
-}
 
 .btns{
   display: grid;
@@ -89,4 +75,22 @@ header h1{
   border-radius: 5px;
   color: #434A59;
   box-shadow: 0px -4px 0px 0px #B3A497 inset;
+  border: none;
+}
+.btn-reset{
+  grid-column: span 2;
+  background-color: #647198;
+  box-shadow: 0px -4px 0px 0px #414E73 inset;
+  color: #fff;
+}
+.btn-equals{
+  grid-column: span 2;
+  background-color: #D03F2F;
+  box-shadow: 0px -4px 0px 0px #93261A inset;
+  color: #fff;
+}
+.btn-del{
+  background-color: #647198;
+  color: #fff;
+  box-shadow: 0px -4px 0px 0px #414E73 inset;
 }

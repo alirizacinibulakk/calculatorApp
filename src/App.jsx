@@ -7,6 +7,8 @@ function App() {
   console.log(display);
 
   function handleButtonClick(value){
+    const operators = ['+', '-', '*', '/'];
+    const lastChar = display.slice(-1);
     // if(value === "DEL"){
     //   setDisplay(display.slice(0,-1))
     // } else if(value === "="){
@@ -17,11 +19,18 @@ function App() {
     // }else{
     //   setDisplay(display + value);
     // }
-    
-    value === "DEL" ? setDisplay(display.slice(0,-1)) : 
-    value === "=" ? setResult(eval(display)) :
-    value === "RESET" ? (setResult(null), setDisplay((""))) :
-    setDisplay(display + value); 
+    if (operators.includes(lastChar) && operators.includes(value)) {
+      setDisplay(display.slice(0, -1) + value);
+    } else {
+      value === "DEL" ? setDisplay(display.slice(0,-1)) : 
+      value === "=" ? setResult(eval(display)) :
+      value === "RESET" ? (setResult(null), setDisplay("")) :
+      setDisplay(display + value);
+    }
+    // value === "DEL" ? setDisplay(display.slice(0,-1)) : 
+    // value === "=" ? setResult(eval(display)) :
+    // value === "RESET" ? (setResult(null), setDisplay((""))) :
+    // setDisplay(display + value); 
   }
   const buttons = ["1","2","3","DEL","4","5","6","+","7","8","9","-",".","0","/","*","RESET","="]
 
@@ -38,7 +47,7 @@ function App() {
           <div className="btns">
             {
               buttons.map(x => (
-                <button key={x} className={`btn ${x === "RESET" ? "btn-reset" : ""} ${x === "DEL" ? "btn-del" : ""} ${x === "=" ? "btn-equals" : ""}`} onClick={() => handleButtonClick(x)}>{x}</button>
+                <button key={x} className={`btn ${x === "RESET" ? "btn-reset" : ""}${x === "DEL" ? "btn-del" : ""}${x === "=" ? "btn-equals" : ""}`} onClick={() => handleButtonClick(x)}>{x}</button>
 
               ))
             }
